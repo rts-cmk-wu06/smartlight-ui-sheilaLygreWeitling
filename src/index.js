@@ -5,6 +5,7 @@ import App from './App';
 import Background from './asstes/Compontens/Background/Background';
 import PageName from './asstes/Compontens/Header/PageName';
 import ControlPanelBackgound from './asstes/Compontens/ControlPanel/ControlPanelBackgound';
+import Footer from './asstes/Compontens/Footer/Footer';
 
 
 
@@ -16,10 +17,12 @@ ReactDOM.render(
       </div>
       <div>
         <PageName controlPanel="ControlPanel" bedRoom="BedRoom" />
-
       </div>
       <div>
         <ControlPanelBackgound />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
 
