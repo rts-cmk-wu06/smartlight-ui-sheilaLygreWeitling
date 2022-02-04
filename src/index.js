@@ -7,11 +7,11 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <div className='bg-blue-600 w-[375px]'>
 
-      </div>
-    </BrowserRouter>
+    <div className='bg-blue-600 w-[375px]'>
+
+    </div>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
