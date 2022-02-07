@@ -13,32 +13,38 @@ const Button = () => {
         {
             image: BedRoomIcon,
             room: "BedRoom",
-            lights: "4 Lights"
+            lights: "4 Lights",
+            id: 1
         },
         {
             image: KitchenIcon,
             room: "LivingRoom",
-            lights: "2 Lights"
+            lights: "2 Lights",
+            id: 2
         },
         {
             image: LivingRoomIcon,
             room: "Kitchen",
-            lights: "5 Lights"
+            lights: "5 Lights",
+            id: 3
         },
         {
             image: BathroomIcon,
             room: "Bathroom",
-            lights: "1 Lights"
+            lights: "1 Lights",
+            id: 4
         },
         {
             image: OutdoorIcon,
             room: "Outdoor",
-            lights: "5 Lights"
+            lights: "5 Lights",
+            id: 5
         },
         {
             image: BalconyIcon,
             room: "Balcony",
-            lights: "2 Lights"
+            lights: "2 Lights",
+            id: 6
         }
     ]
 
