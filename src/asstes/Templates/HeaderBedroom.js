@@ -7,10 +7,10 @@ const HeaderBedroom = () => {
     return <div>
         <div className='flex'>
             <div className='flex items-center'>
-                <div className='px-2.5 pt-2.5'>
+                <div className='items-center'>
                     <Arrow />
                 </div>
-                <BedRoomName name="Bed" room="Room" />
+                <BedRoomName name="Bed" room="Room" lights="4 Lights" />
             </div>
             <LampSVG />
         </div>
