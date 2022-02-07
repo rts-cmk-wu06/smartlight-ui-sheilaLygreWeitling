@@ -1,8 +1,21 @@
 import React from 'react';
+import bulb from "../Image/bulb.png"
+import home from "../Image/home.png"
+import settings from "../Image/settings.png"
 
 const Footer = () => {
     return <div>
-        <p>hejhejhejhej</p>
+        <div className='bg-white flex justify-evenly p-4'>
+            <button>
+                <img src={bulb} alt="bulb" />
+            </button>
+            <button>
+                <img src={home} alt="home" />
+            </button>
+            <button>
+                <img src={settings} alt="Cogwheel" />
+            </button>
+        </div>
     </div>;
 };
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from './asstes/Pages/Home';
+import './index.css'
 
 
 
@@ -7,11 +9,11 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <div className='bg-blue-600 w-[375px]'>
 
-      </div>
-    </BrowserRouter>
+    <div className='bg-blue-600 w-[375px]'>
+      <Home />
+    </div>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
