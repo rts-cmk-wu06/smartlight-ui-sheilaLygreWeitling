@@ -5,7 +5,7 @@ import settings from "../Image/settings.png"
 
 const Footer = () => {
     return <div>
-        <div className='bg-white flex justify-evenly p-4'>
+        <div className='bg-white flex justify-evenly p-4 min-h-[100vh]'>
             <button>
                 <img src={bulb} alt="bulb" />
             </button>
