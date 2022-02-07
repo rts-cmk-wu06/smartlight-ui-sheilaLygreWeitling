@@ -1,11 +1,10 @@
 import React from 'react';
-import LampSVG from '../Compontens/LampSVG';
+import HeaderBedroom from '../Templates/HeaderBedroom';
+
 
 const BedRoom = () => {
     return <div>
-        <div>
-            <LampSVG />
-        </div>
+        <HeaderBedroom />
     </div>;
 };
 
