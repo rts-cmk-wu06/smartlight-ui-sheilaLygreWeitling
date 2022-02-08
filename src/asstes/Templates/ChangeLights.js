@@ -5,8 +5,12 @@ import SlideBar from '../Compontens/SlideBar';
 
 const ChangeLights = () => {
     return <div>
-        <BedRoomChanges />
-        <SlideBar />
+        <div className='bg-gray-50 '>
+            <BedRoomChanges />
+            <div className='p-4'>
+                <SlideBar />
+            </div>
+        </div>
     </div>;
 };
 
