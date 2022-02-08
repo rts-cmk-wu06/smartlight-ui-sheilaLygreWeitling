@@ -1,5 +1,6 @@
 import React from 'react';
 import BedRoomChanges from '../Compontens/BedRoomChanges';
+import ColorButtons from '../Compontens/ColorButtons';
 import SlideBar from '../Compontens/SlideBar';
 
 
@@ -10,6 +11,7 @@ const ChangeLights = () => {
             <div className='p-4'>
                 <SlideBar />
             </div>
+            <ColorButtons />
         </div>
     </div>;
 };
