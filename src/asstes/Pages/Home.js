@@ -8,13 +8,10 @@ import RoomCategory from "../Templates/RoomCategory";
 const Home = () => {
     return <div>
         <div>
-
-
             <PageName />
             <RoomCategory />
             <Button />
             <Footer />
-
         </div>
     </div>;
 };

@@ -3,8 +3,8 @@ import React from 'react';
 const BedRoomChanges = () => {
     return <div>
         <main>
-            <div className='bg-gray-50 '>
-                <p>HEJ</p>
+            <div >
+                <p className='text-blue-900 font-bold text-xl pt-5 px-3'>Intensity</p>
             </div>
 
         </main>
