@@ -1,4 +1,4 @@
-import React from 'react';
+
 import extraBtn from '../Image/EkstraBtn.svg';
 import React from 'react';
 
