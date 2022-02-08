@@ -3,7 +3,7 @@ import React from 'react';
 const BedRoomChanges = () => {
     return <div>
         <main>
-            <div className='bg-gray-50  rounded-t-[30px] '>
+            <div className='bg-gray-50 '>
                 <p>HEJ</p>
             </div>
 
