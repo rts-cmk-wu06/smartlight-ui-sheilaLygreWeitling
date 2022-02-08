@@ -20,16 +20,16 @@ const SlideBar = () => {
                     onChange={({ x }) => setState(state => ({ ...state, x }))}
                     styles={{
                         track: {
-                            backgroundColor: 'gray',
+                            backgroundColor: 'lightgray',
                             width: 258,
                             height: 1
                         },
                         active: {
-                            backgroundColor: 'gray'
+                            backgroundColor: 'lightgray'
                         },
                         thumb: {
-                            width: 10,
-                            height: 10
+                            width: 12,
+                            height: 12
                         },
                         disabled: {
                             opacity: 0.5
