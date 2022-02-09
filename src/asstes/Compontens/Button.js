@@ -17,13 +17,13 @@ const Button = () => {
             id: 1
         },
         {
-            image: KitchenIcon,
+            image: LivingRoomIcon,
             room: "LivingRoom",
             lights: "2 Lights",
             id: 2
         },
         {
-            image: LivingRoomIcon,
+            image: KitchenIcon,
             room: "Kitchen",
             lights: "5 Lights",
             id: 3
