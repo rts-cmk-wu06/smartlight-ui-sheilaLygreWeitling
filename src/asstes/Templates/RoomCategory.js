@@ -1,5 +1,5 @@
 import React from 'react';
-import ControlPanelBackgound from '../Compontens/ControlPanelBackgound';
+
 
 const RoomCategory = () => {
     return <div>
