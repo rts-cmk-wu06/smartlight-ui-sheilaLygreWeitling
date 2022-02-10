@@ -1,29 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BedRoom from './asstes/Pages/BedRoom';
-import Home from './asstes/Pages/Home';
+import * as Sentry from "@sentry/react";
+import { BrowserTracing } from "@sentry/tracing";
 import './index.css'
 import "./css/App.css"
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, Link } from "react-router-dom";
+import App from './App';
+import ErrorBoundary from './asstes/Compontens/ErrorBoundary';
 
+Sentry.init({
+  dsn: "https://c7e715b265074c4ea8909bf6e30f312d@o1140325.ingest.sentry.io/6197852",
+  integrations: [new BrowserTracing()],
 
-
-
-
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-
-      <div className='bg-blue-600 w-[375px]'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Home/Bedroom" element={<BedRoom />} />
-        </Routes>
-      </div>
-
-    </BrowserRouter>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );
