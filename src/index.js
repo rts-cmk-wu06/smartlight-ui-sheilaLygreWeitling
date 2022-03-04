@@ -10,10 +10,6 @@ import ErrorBoundary from './asstes/Compontens/ErrorBoundary';
 Sentry.init({
   dsn: "https://c7e715b265074c4ea8909bf6e30f312d@o1140325.ingest.sentry.io/6197852",
   integrations: [new BrowserTracing()],
-
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
   tracesSampleRate: 1.0,
 });
 
