@@ -6,8 +6,20 @@ import BathroomIcon from "../Image/bathtube.png"
 import OutdoorIcon from "../Image/house.png"
 import BalconyIcon from "../Image/balcony.png"
 import { NavLink } from 'react-router-dom';
+import { motion } from "framer-motion";
+
 
 const Button = () => {
+
+    const fadeVariants = {
+        hidden: { opacity: 0 },
+        shown: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+            },
+        },
+    };
 
     const RoomNames = [
         {
@@ -49,17 +61,24 @@ const Button = () => {
     ]
 
     return <div>
-        <div className=' border border-none inline-grid grid-cols-2 gap-6 w-full p-6'>
-            {RoomNames.map(({ image, room, lights }, i) => (
-                <NavLink to={`/${room}`} key={i}>
-                    <button className='w-full text-left bg-white shadow-xl p-3 rounded-xl' key={i}>
-                        <img src={image} alt="icon" />
-                        <p className='text-xl'>{room}</p>
-                        <p className='text-xs text-yellow-500 font-bold'>{lights}</p>
-                    </button>
-                </NavLink>
-            ))}
-        </div>
+        <motion.div
+            variants={fadeVariants}
+            animate="shown"
+            initial="hidden"
+            className="flex flex-col gap-2 h-full"
+        >
+            <div className=' border border-none inline-grid grid-cols-2 gap-6 w-full p-6'>
+                {RoomNames.map(({ image, room, lights }, i) => (
+                    <NavLink to={`/${room}`} key={i}>
+                        <button className='w-full text-left bg-white shadow-xl p-3 rounded-xl' key={i}>
+                            <img src={image} alt="icon" />
+                            <p className='text-xl'>{room}</p>
+                            <p className='text-xs text-yellow-500 font-bold'>{lights}</p>
+                        </button>
+                    </NavLink>
+                ))}
+            </div>
+        </motion.div>
     </div>;
 };
 
