@@ -49,9 +49,9 @@ const Button = () => {
     ]
 
     return <div>
-        <div className='bg-gray-50 border border-none inline-grid grid-cols-2 gap-6 w-full p-6'>
+        <div className=' border border-none inline-grid grid-cols-2 gap-6 w-full p-6'>
             {RoomNames.map(({ image, room, lights }, i) => (
-                <NavLink to={`/Home/${room}`} key={i}>
+                <NavLink to={`/${room}`} key={i}>
                     <button className='w-full text-left bg-white shadow-xl p-3 rounded-xl' key={i}>
                         <img src={image} alt="icon" />
                         <p className='text-xl'>{room}</p>

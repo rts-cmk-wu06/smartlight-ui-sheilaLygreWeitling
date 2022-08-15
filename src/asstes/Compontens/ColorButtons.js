@@ -5,7 +5,7 @@ import React from 'react';
 
 const ColorButtons = () => {
 
-    const ColorArray = [
+    const ColorArray = [  
         "#FF9B9B", "#94EB9E", "#94CAEB", "#A594EB", "#DE94EB", "#EBD094",
     ]
 

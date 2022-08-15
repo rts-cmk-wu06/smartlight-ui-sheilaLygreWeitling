@@ -6,6 +6,7 @@ import './index.css'
 import "./css/App.css"
 import App from './App';
 import ErrorBoundary from './asstes/Compontens/ErrorBoundary';
+import { BrowserRouter } from 'react-router-dom';
 
 Sentry.init({
   dsn: "https://c7e715b265074c4ea8909bf6e30f312d@o1140325.ingest.sentry.io/6197852",
@@ -16,7 +17,9 @@ Sentry.init({
 ReactDOM.render(
   <React.StrictMode>
     <ErrorBoundary>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')

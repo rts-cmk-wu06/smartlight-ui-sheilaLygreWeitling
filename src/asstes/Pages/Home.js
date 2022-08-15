@@ -9,9 +9,14 @@ const Home = () => {
     return <div>
         <div>
             <PageName />
-            <RoomCategory />
-            <Button />
-            <Footer />
+            <div className='bg-gray-100 rounded-md h-fit '>
+                <RoomCategory />
+                <Button />
+                <div className='bg-white'>
+                    <Footer />
+                </div>
+
+            </div>
         </div>
     </div>;
 };
