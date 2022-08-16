@@ -1,42 +1,45 @@
-import React from 'react';
-import Slider from 'react-input-slider';
-import { useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 import bulbLeft from "../Image/intens1.png"
 import bulbRight from "../Image/intens2.png"
+import axios from 'axios';
+import _ from 'lodash';
 
 
 const SlideBar = () => {
-    const [state, setState] = useState({ x: 0, y: 0 });
+
+
+    const [bri, setBri] = useState(50);
+    const changeBri = (value) => {
+        setBri(value);
+    };
+
+    const throttle = useMemo(() => _.throttle(changeBri, 1000), []);
+
+    useEffect(() => {
+        axios(
+            'http://192.168.8.100/api/rMqkWU8nZ8UXb0hsfuiY8eSblyVF8fi9WNn642s4/lights/53/state',
+            {
+                method: 'PUT',
+                data: {
+                    bri,
+                }
+            })
+    }, [bri])
 
     return <div>
         <div className='flex'>
             <div className='p-3'>
                 <img src={bulbLeft} alt="bulb" />
             </div>
-            <div className='p-2'>
-                <Slider
-                    axis="x"
-                    x={state.x}
-                    onChange={({ x }) => setState(state => ({ ...state, x }))}
-                    styles={{
-                        track: {
-                            backgroundColor: 'lightgray',
-                            width: 258,
-                            height: 1
-                        },
-                        active: {
-                            backgroundColor: 'lightgray'
-                        },
-                        thumb: {
-                            width: 12,
-                            height: 12
-                        },
-                        disabled: {
-                            opacity: 0.5
-                        }
-                    }}
-                />
-            </div>
+            <Slider
+                defaultValue={bri}
+                onChange={throttle}
+                max={255}
+                marks={100}
+                step={1}
+            />
             <div className='p-2'>
                 <img src={bulbRight} alt="bulb" />
             </div>

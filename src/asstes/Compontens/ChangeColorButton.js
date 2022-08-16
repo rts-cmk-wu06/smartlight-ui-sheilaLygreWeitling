@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import ColorConverter from 'cie-rgb-color-converter';
 
-
-
 const ChangeColorButton = ({ r, g, b }) => {
     const [color, setColor] = useState([]);
-
 
     let xy = ColorConverter.rgbToXy(r, g, b);
 

@@ -1,6 +1,5 @@
 import extraBtn from '../Image/EkstraBtn.svg';
 import React from 'react';
-import { useEffect } from 'react';
 import ChangeColorButton from './ChangeColorButton';
 
 const ColorButtons = () => {
