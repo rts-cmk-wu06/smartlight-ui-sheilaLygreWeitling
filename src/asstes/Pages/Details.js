@@ -4,6 +4,7 @@ import HeaderBedroom from '../Templates/HeaderBedroom';
 import Footer from '../Compontens/Footer';
 import Lights from '../Templates/Lights';
 import { motion } from 'framer-motion';
+import TurnOff from '../Compontens/TurnOff';
 
 
 const Details = () => {
@@ -31,7 +32,12 @@ const Details = () => {
             >
                 <HeaderBedroom />
                 <Lights />
-                <ChangeLights />
+                <div className='relative'>
+                    <div className='right-[20px] top-[-15px] absolute'>
+                        <TurnOff />
+                    </div>
+                    <ChangeLights />
+                </div>
                 <div className='bg-white'>
                     <Footer />
                 </div>
