@@ -9,7 +9,7 @@ import TurnOff from '../Compontens/TurnOff';
 
 const Details = () => {
     const fadeVariants = {
-        hden: { opacity: 0 },
+        hidden: { opacity: 0 },
         shown: {
             opacity: 1,
             transition: {

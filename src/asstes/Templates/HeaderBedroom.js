@@ -28,7 +28,7 @@ const HeaderBedroom = () => {
                         <Arrow />
                     </div>
                     <div className='flex-col p-4 '>
-                        <div className='text-white text-2xl p-4'>
+                        <div className='text-white text-2xl '>
                             {groups.name}
                         </div>
                         <div className=' text-l text-yellow-500 font-bold p-4'>

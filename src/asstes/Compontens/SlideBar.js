@@ -5,11 +5,13 @@ import bulbLeft from "../Image/intens1.png"
 import bulbRight from "../Image/intens2.png"
 import axios from 'axios';
 import _ from 'lodash';
+import { useParams } from 'react-router-dom';
+
 
 
 const SlideBar = () => {
 
-
+    const { name } = useParams();
     const [bri, setBri] = useState(50);
     const changeBri = (value) => {
         setBri(value);
@@ -19,7 +21,7 @@ const SlideBar = () => {
 
     useEffect(() => {
         axios(
-            'http://192.168.8.100/api/rMqkWU8nZ8UXb0hsfuiY8eSblyVF8fi9WNn642s4/lights/53/state',
+            'http://192.168.8.100/api/rMqkWU8nZ8UXb0hsfuiY8eSblyVF8fi9WNn642s4/groups/' + name + '/action',
             {
                 method: 'PUT',
                 data: {
