@@ -1,15 +1,16 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import offIcon from '../Image/offIcon.png'
-
 
 const TurnOff = () => {
 
     const [on, setOn] = useState(true);
+    let { name } = useParams();
 
     useEffect(() => {
         axios({
-            url: 'http://192.168.8.100/api/rMqkWU8nZ8UXb0hsfuiY8eSblyVF8fi9WNn642s4/lights/53/state',
+            url: 'http://192.168.8.100/api/rMqkWU8nZ8UXb0hsfuiY8eSblyVF8fi9WNn642s4/groups/' + name + '/action',
             method: 'PUT',
             data: {
                 on

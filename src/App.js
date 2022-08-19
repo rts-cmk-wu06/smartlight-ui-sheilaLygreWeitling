@@ -9,7 +9,7 @@ function App() {
     <div className='bg-blue-600'>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<Details />} />
+        <Route path="/details/:name" element={<Details />} />
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
     </div>
